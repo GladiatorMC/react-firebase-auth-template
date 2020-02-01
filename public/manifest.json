@@ -1,6 +1,6 @@
 {
-  "short_name": "login-prototype-01",
-  "name": "Login Prototype (#01)",
+  "short_name": "react-firebase-auth-template",
+  "name": "React Firebase Authentication Template",
   "icons": [
     {
       "src": "favicon.ico",
