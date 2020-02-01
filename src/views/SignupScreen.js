@@ -1,7 +1,7 @@
 import React from "react";
-import { firebase } from "../configuration/firebase";
+import { firebase } from "../configuration/firebase2";
 
-import "../configuration/style-default.css";
+import "../configuration/style.css";
 
 export default class SignupScreen extends React.Component {
     constructor() {
@@ -12,6 +12,14 @@ export default class SignupScreen extends React.Component {
             confpassword: "",
             error: ""
         }
+    }
+
+    componentWillMount = () => {
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                this.props.history.push("/home");
+            }
+        });
     }
 
     login = (e) => {

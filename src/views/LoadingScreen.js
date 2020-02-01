@@ -1,7 +1,7 @@
 import React from "react";
-import { firebase } from "../configuration/firebase";
+import { firebase } from "../configuration/firebase2";
 
-import "../configuration/style-default.css";
+import "../configuration/style.css";
 
 export default class LoadingScreen extends React.Component {
     constructor() {

@@ -1,5 +1,5 @@
 import React from "react";
-import { firebase } from "../configuration/firebase";
+import { firebase } from "../configuration/firebase2";
 
 import "../configuration/style.css";
 
@@ -27,7 +27,7 @@ export default class HomeScreen extends React.Component {
         return (
             <div className="home">
                 <p>Welcome, {this.state.user.email}</p>
-                <button onClick={firebase.auth().signOut()}>Logout</button>
+                <button onClick={() => firebase.auth().signOut()}>Logout</button>
             </div>
         );
     }

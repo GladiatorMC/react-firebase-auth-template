@@ -1,7 +1,7 @@
 import React from "react";
-import { firebase } from "../configuration/firebase";
+import { firebase } from "../configuration/firebase2";
 
-import "../configuration/style-default.css";
+import "../configuration/style.css";
 
 export default class LoginScreen extends React.Component {
     constructor() {
@@ -30,6 +30,14 @@ export default class LoginScreen extends React.Component {
             this.setState({
                 error: error.message
             });
+        });
+    }
+
+    componentWillMount = () => {
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                this.props.history.push("/home");
+            }
         });
     }
 
