@@ -1,7 +1,7 @@
 import React from "react";
 import { firebase } from "../configuration/firebase";
 
-import "../configuration/style-default.css";
+import "../configuration/style.css";
 
 export default class SignupScreen extends React.Component {
     constructor() {
