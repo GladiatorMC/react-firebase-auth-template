@@ -12,6 +12,14 @@ export default class LoginScreen extends React.Component {
             error: ""
         }
     }
+    
+    componentWillMount = () => {
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                this.props.history.push("/home");
+            }
+        });
+    }
 
     login = (e) => {
         e.preventDefault();
@@ -30,14 +38,6 @@ export default class LoginScreen extends React.Component {
             this.setState({
                 error: error.message
             });
-        });
-    }
-
-    componentWillMount = () => {
-        firebase.auth().onAuthStateChanged(user => {
-            if (user) {
-                this.props.history.push("/home");
-            }
         });
     }
 
