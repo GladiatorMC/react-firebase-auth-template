@@ -22,7 +22,7 @@ export default class SignupScreen extends React.Component {
         });
     }
 
-    login = (e) => {
+    signup = (e) => {
         e.preventDefault();
         let email = this.state.email;
         let password = this.state.password;
@@ -54,7 +54,7 @@ export default class SignupScreen extends React.Component {
                 <div className="error">
                     { this.state.error ? <p>{this.state.error}</p> : null }
                 </div>
-                <form onSubmit={(e) => this.login(e)}>
+                <form onSubmit={(e) => this.signup(e)}>
                     <input type="email" placeholder="Enter your email..." onChange={(e) => this.setState({ email: e.target.value })} />
                     <input type="password" placeholder="Enter your password..." onChange={(e) => this.setState({ password: e.target.value })} />
                     <input type="password" placeholder="Confirm your password..." onChange={(e) => this.setState({ confpassword: e.target.value })} />
