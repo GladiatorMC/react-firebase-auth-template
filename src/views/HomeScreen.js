@@ -1,5 +1,5 @@
 import React from "react";
-import { firebase } from "../configuration/firebase2";
+import { firebase } from "../configuration/firebase";
 
 import "../configuration/style.css";
 
